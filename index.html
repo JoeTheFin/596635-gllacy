@@ -27,11 +27,34 @@
             </ul>
         </nav>
         <ul class="user_navigation">
-            <li>search
+            <li>
+                <button class="header_btn" type="button"></button>
+                <div class="search_hover">
+                    <form>
+                        <input type="text" placeholder="Что ищем?">
+                    </form>
+                </div>
             </li>
-            <li>login
+            <li>
+                <button class="header_btn" type="button">Вход</button>
+                <div class="login_hover">
+                    <form class="user" method="post" action="https://echo.htmlacademy.ru">
+                        <p>
+                            <label for="input-mail" class="visually_hidden">Электронная почта</label>
+                            <input id="e-mail" type="text" name="e-mail" placeholder="Электронная почта">
+                        </p>
+                        <p>
+                            <label for="input-mail" class="visually_hidden">Пароль</label>
+                            <input id="user-password" type="password" name="password" placeholder="Пароль">
+                        </p>
+                        <button class="btn enter_btn" type="submit">Войти</button>
+                        <a class="form_help" href="#">Забыли пароль?</a>
+                        <a class="form_help" href="#">Новая регистрация</a>
+                    </form>
+                </div>
             </li>
-            <li>basket
+            <li>
+                <button class="header_btn" type="button">Пусто</button>
             </li>
         </ul>
         <div class="communication_info">
@@ -73,7 +96,7 @@
             </ul>
         </div>
 
-        <div class="sale_box">  
+        <div class="sale_box">
             <section class="sale_one">
                 <h2>Малинка даром!</h2>
                 <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -85,7 +108,7 @@
                 <a class="btn chocolate_btn" href="catalog.html">Хочу шоколадки!</a>
             </section>
         </div>
-         
+
         <div class="hits">
             <div class="price_list">
                 <article class="product hit_one">
@@ -131,7 +154,7 @@
             <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </div>
 
-        <div class="news_box">  
+        <div class="news_box">
             <article class="blog_box">
                 <h4>Новое в нашем блоге</h4>
                 <a class="blog_link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
@@ -167,9 +190,9 @@
         <div class="footer_social">
             <ul>
                 <li><a class="social_btn btn_twitter" href="#">Twitter</a></li>
-                <li><a class="social_btn btn_instagram" href="#">Instagram</a></li>
-                <li><a class="social_btn btn_facebook" href="#">Facebook</a></li>
-                <li><a class="social_btn btn_vk" href="#">Вконтакте</a></li>
+                <li><a class="social_btn btn_instagram" href="#" aria-label="Instagram">Instagram</a></li>
+                <li><a class="social_btn btn_facebook" href="#" aria-label="Facebook"></a></li>
+                <li><a class="social_btn btn_vk" href="#" aria-label="Вконтакте"></a></li>
             </ul>
         </div>
 
