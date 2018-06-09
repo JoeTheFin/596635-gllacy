@@ -179,8 +179,18 @@
 
         <section class="modal send_modal">
             <h2>Мы обязательно вам ответим!</h2>
-            <!-- здесь будут формы -->
-            <button сlass="btn modal_btn">Отправить</button>
+            <form class="modal_form" method="post" action="https://echo.htmlacademy.ru">
+                <p><input type="text" placeholder="Как вас зовут?" id="modal_name">
+                    <label class="visually_hidden" for="modal_name">Как вас зовут?</label>
+                </p>
+                <p><input type="text" placeholder="Ваша почта для ответа?" id="modal_email">
+                    <label class="visually_hidden" for="modal_name">Ваша почта для ответа?</label>
+                </p>
+                <p><input type="textarea" placeholder="Напишите что-нибудь..." id="modal_comment">
+                    <label class="visually_hidden" for="modal_name">Напишите что-нибудь...</label>
+                </p>
+                <button сlass="btn modal_btn">Отправить</button>
+            </form>
             <span class="modal_close">x</span>
         </section>
     </main>
