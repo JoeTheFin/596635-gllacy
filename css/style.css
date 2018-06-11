@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #94b0a0;
+    background-image: url("../img/Мороженко 1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main_navigation {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.site_navigation,
+.user_navigation {
+    list-style: none;
+}
+
+.site_navigation a,
+.user_navigation a {
+    color: #ffffff;
+}
+
+.site_navigation a:hover,
+.site_navigation a:focus,
+.user_navigation a:hover,
+.user_navigation a:focus {
+    background-color: #ffffff;
+    color: #333333;
+}
