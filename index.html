@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
                     <li>Мелорин</li>
                 </ul>
                 <li><a href=#>Доставка и оплата</a></li>
-                <li><a href=#>О компании</a></li>
+                <li><a href=#>О Компании</a></li>
             </ul>
         </nav>
         <ul class="user_navigation">
@@ -102,12 +102,12 @@
         <div class="sale_box">
             <section class="sale_one">
                 <h2>Малинка даром!</h2>
-                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <p>При покупке 2 кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="btn jam_btn" href="catalog.html">Хочу варенье!</a>
             </section>
             <section class="sale_two">
                 <h2>Шоколадки даром!</h2>
-                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br> вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                 <a class="btn chocolate_btn" href="catalog.html">Хочу шоколадки!</a>
             </section>
         </div>
@@ -116,8 +116,8 @@
             <div class="price_list">
                 <article class="product hit_one">
                     <img src="img/1.jpg" width="267px" height="267px" alt="Апельсиновое мороженое"></img>
-                    <p class="price_hit">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                    <p class="price_hit">310&#8381<span>/кг</span></p>
+                    <a>Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
@@ -125,7 +125,7 @@
                 <article class="product hit_two">
                     <img src="img/2.jpg" width="267px" height="267px" alt="Кофейное мороженое"></img>
                     <p class="price_hit">380&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочно-кофейное с кусочками шоколада</a>
+                    <a>Сливочно-кофейное с кусочками шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
@@ -133,7 +133,7 @@
                 <article class="product hit_three">
                     <img src="img/3.jpg" width="267px" height="267px" alt="Клубничное мороженое"></img>
                     <p class="price_hit">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                    <a>Сливочно-клубничное с присыпкой из белого шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
@@ -141,7 +141,7 @@
                 <article class="product hit_four">
                     <img src="img/4.jpg" width="267px" height="267px" alt="Крем-брюле"></img>
                     <p class="price_hit">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочное крем-брюле с карамельной подливкой</a>
+                    <a>Сливочное крем-брюле с карамельной подливкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
@@ -160,13 +160,17 @@
         <div class="news_box">
             <article class="blog_box">
                 <h4>Новое в нашем блоге</h4>
-                <a class="blog_link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                <a class="blog_link" href="#">10 способов сервировки<br> фруктовых щербетов к<br> столу</a>
             </article>
 
             <div class="send_box">
-                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <span>Электронная почта</span>
-                <a class="btn send_btn" href="#">Отправить</a>
+                <div class="content_send">
+                    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                    <form method="post" name="subscribtion">
+                        <input type="text" placeholder="Электронная почта">
+                        <a class="btn send_btn" href="#">Отправить</a>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -177,9 +181,10 @@
             </p>
             <section class="contacts">
                 <p>Адрес главного офиса<br> и офлайн-магазина:<br>
-                    <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+                    <span>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</span></p>
                 <p>Для заказов по телефону:<br>
-                    <span>8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
+                    <span>8 812 450-25-25</span><br></p>
+                <p class="time_job">(с 10 до 20 ежедневно)</p>
                 <a class="btn btn_feedback" href="#">Форма обратной связи</a>
             </section>
         </div>
@@ -208,8 +213,8 @@
             <ul>
                 <li><a class="social_btn btn_twitter" href="#">Twitter</a></li>
                 <li><a class="social_btn btn_instagram" href="#" aria-label="Instagram">Instagram</a></li>
-                <li><a class="social_btn btn_facebook" href="#" aria-label="Facebook"></a></li>
-                <li><a class="social_btn btn_vk" href="#" aria-label="Вконтакте"></a></li>
+                <li><a class="social_btn btn_facebook" href="#" aria-label="Facebook">Facebook</a></li>
+                <li><a class="social_btn btn_vk" href="#" aria-label="Вконтакте">Вконтакте</a></li>
             </ul>
         </div>
 
