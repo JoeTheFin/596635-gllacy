@@ -49,13 +49,13 @@ h2 {
     color: #ffffff;
 }
 
-ul.site_navigation li:first-child a {
+.catalog_btn a {
     background-color: #d07058;
     border-radius: 20px;
     padding: 5px 17px;
 }
 
-ul.site_navigation li:first-child a:hover {
+.catalog_btn a:hover {
     background-color: #f7f6f3;
     color: #333333;
 }
@@ -195,6 +195,29 @@ ul.checkbox_filter li {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+}
+
+div.filters .filter_btn {
+    background-color: #9cb0a4;
+    color: #ffffff;
+    outline: none;
+    border: 2px solid #ffffff;
+    padding: 7px 25px;
+    border-radius: 16px;
+}
+
+div.filters .filter_btn:hover {
+    color: #353535;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+div.filters .filter_btn:active {
+    color: #353535;
+    background-color: #eaeaea;
+    box-shadow: inset 0px 2px 2px 0px #6a6b6a;
+    border: none;
+    padding: 9px 27px;
 }
 
 section.sale_one {
