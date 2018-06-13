@@ -12,6 +12,10 @@ body {
     background-repeat: no-repeat;
 }
 
+body.catalog_html {
+    background-image: linear-gradient(to bottom, #9cb0a5 10%, #849d8f 90%)
+}
+
 a {
     font: inherit;
     text-decoration: none;
@@ -36,6 +40,28 @@ input[type="password"]:hover {
 input[type="text"]:focus,
 input[type="password"]:focus {
     border: 2px solid #8fbdec;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+    color: #ffffff;
+}
+
+ul.site_navigation li:first-child a {
+    background-color: #d07058;
+    border-radius: 20px;
+    padding: 5px 17px;
+}
+
+ul.site_navigation li:first-child a:hover {
+    background-color: #f7f6f3;
+    color: #333333;
+}
+
+ul.site_navigation li:first-child a:active {
+    box-shadow: inset 0px 1px 1px 1px #696969;
 }
 
 .main_navigation {
@@ -67,10 +93,27 @@ button.header_btn {
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
-    font-weight: 400;
+    font-weight: 500;
     background-color: #9db1a5;
     padding: 5px 15px;
     border-radius: 20px;
+}
+
+button.table_basket {
+    color: #323232;
+    background-color: #f7f6f3;
+}
+
+.breadcrumb li{
+    display: inline-block; 
+}
+
+.breadcrumb a {
+    font: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #f7f6f3;
 }
 
 .communication_info p {
@@ -121,6 +164,39 @@ a.slider_btn {
     padding: 22px 40px;
 }
 
+div.filters legend{
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+div.filters select {
+    background-color: #a9bab0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+div.filters select:hover {
+    color: #323232;
+}
+
+ul.radio_filter li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+ul.checkbox_filter li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
 section.sale_one {
     background-color: #7b0927;
     background-image: url("../img/Малиновый фон.jpg");
@@ -159,14 +235,17 @@ section.sale_two p {
     color: #ffffff;
 }
 
-div.hits img {
+div.hits img,
+div.icecream img {
     border-radius: 50%;
 }
 
-p.price_hit {
+p.price_hit,
+p.price_icecream {
     color: #ffffff;
     font-size: 45px;
     line-height: 45px;
+    font-weight: 700;
 }
 
 /* p.price_hit span.ruble {
@@ -174,12 +253,14 @@ p.price_hit {
     background-repeat: no-repeat;
 } */
 
-p.price_hit span {
+p.price_hit span,
+p.price_icecream span{
     font-size: 30px;
     line-height: 45px;
 }
 
-div.hits a {
+div.hits a,
+div.icecream a {
     font: inherit;
     font-size: 16px;
     line-height: 22px;
@@ -187,7 +268,9 @@ div.hits a {
 }
 
 div.hits a:hover,
-div.hits a:active {
+div.hits a:active,
+div.icecream a:hover,
+div.icecream a:active {
     color: #ffbc9e;
 }
 
