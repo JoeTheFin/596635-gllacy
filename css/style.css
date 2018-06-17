@@ -535,6 +535,47 @@ section.contacts span {
     font-weight: 700;
 }
 
+ul.pages li {
+    display: inline-block;
+    list-style: none;
+}
+
+ul.pages p {
+    color: #323232;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+ul.pages div.one_page {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+ul.pages li a {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+ul.pages li a:hover {
+    background-color: #9aaea3;
+}
+
+ul.pages li a:active {
+    color: #323232;
+    background-color: #ffffff;
+}
+
+ul.pages li:first-child a {
+    color: #9aaea3;
+}
+
 section.modal {
     width: 480px;
     height: 443px;
