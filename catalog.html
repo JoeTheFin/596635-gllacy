@@ -26,7 +26,7 @@
                     <li>Мелорин</li>
                 </ul>
                 <li><a href=#>Доставка и оплата</a></li>
-                <li><a href=#>О компании</a></li>
+                <li><a href=#>О Компании</a></li>
             </ul>
         </nav>
         <ul class="user_navigation">
@@ -75,7 +75,7 @@
                             <td>450 руб.</td>
                         </tr>
                         <tr>
-                            <td>Итого:750 руб.</td>
+                            <td class="all_send">Итого:750 руб.</td>
                         </tr>
                     </table>
                     <button class="btn btn_basket" type="submit">Оформить заказ</button>
@@ -114,6 +114,9 @@
                    <legend>Сортировка:</legend>
                    <select name="sorting">
                        <option value="popular">по популярности</option>
+                       <option value="popular">сначала недорогие</option>
+                       <option value="popular">сначала дорогие</option>
+                       <option value="popular">по жирности</option>
                    </select>
                </fieldset>
                <fieldset>
@@ -170,103 +173,103 @@
                        </li>
                    </ul>
                </fieldset>
-           </form> 
            <button class="filter_btn">Применить</button>
+           </form>
         </div>
         
         <div class="icecream">
             <div class="catalog_icecream">
                 <article class="product icecream_one">
                     <img src="img/1.jpg" width="267px" height="267px" alt="Апельсиновое мороженое"></img>
-                    <p class="price_icecream">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                    <p class="price_icecream">310<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link description_hit">Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_two">
                     <img src="img/2.jpg" width="267px" height="267px" alt="Кофейное мороженое"></img>
-                    <p class="price_icecream">380&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочно-кофейное с кусочками шоколада</a>
+                    <p class="price_icecream">380<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link description_hit">Сливочно-кофейное с кусочками<br> шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_three">
                     <img src="img/3.jpg" width="267px" height="267px" alt="Клубничное мороженое"></img>
-                    <p class="price_icecream">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                    <p class="price_icecream">310<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link description_hit">Сливочно-клубничное с<br> присыпкой из белого шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_four">
                     <img src="img/4.jpg" width="267px" height="267px" alt="Крем-брюле"></img>
-                    <p class="price_icecream">310&#8381;<span>/кг</span></p>
-                    <a class="description_link description_hit">Сливочное крем-брюле с карамельной подливкой</a>
+                    <p class="price_icecream">310<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link description_hit">Сливочное крем-брюле с<br> карамельной подливкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_five">
                     <img src="img/5.jpg" width="267px" height="267px" alt="Брусничное мороженое"></img>
-                    <p class="price_icecream">325&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочное с брусничным джемом</a>
+                    <p class="price_icecream">325<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочное с брусничным<br> джемом</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_six">
                     <img src="img/6.jpg" width="267px" height="267px" alt="Черничное мороженое"></img>
-                    <p class="price_icecream">410&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочно-черничное с цельными ягодами черники</a>
+                    <p class="price_icecream">410<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочно-черничное с цельными<br> ягодами черники</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_seven">
                     <img src="img/7.jpg" width="267px" height="267px" alt="Лимонное мороженое"></img>
-                    <p class="price_icecream">375&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочно-лимонное с карамельной присыпкой</a>
+                    <p class="price_icecream">375<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочно-лимонное с<br> карамельной присыпкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_eight">
                     <img src="img/8.jpg" width="267px" height="267px" alt="Шоколадное мороженое"></img>
-                    <p class="price_icecream">320&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочное с шоколадной стружкой</a>
+                    <p class="price_icecream">320<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочное с шоколадной<br> стружкой</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_nine">
                     <img src="img/9.jpg" width="267px" height="267px" alt="Ванильное мороженое"></img>
-                    <p class="price_icecream">440&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочно-ванильное с кусочками шоколада</a>
+                    <p class="price_icecream">440<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочно-ванильное с<br> кусочками шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_ten">
                     <img src="img/10.jpg" width="267px" height="267px" alt="Ментоловое мороженое"></img>
-                    <p class="price_icecream">435&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочное с ментоловым сиропом</a>
+                    <p class="price_icecream">435<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочное с ментоловым<br> сиропом</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_eleven">
                     <img src="img/11.jpg" width="267px" height="267px" alt="Шоколадное мороженое"></img>
-                    <p class="price_icecream">355&#8381;<span>/кг</span></p>
-                    <a class="description_link">Сливочное с кусочками черного шоколада</a>
+                    <p class="price_icecream">355<span class="rub"></span><span>/кг</span></p>
+                    <a class="description_link">Сливочное с кусочками черного<br> шоколада</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
                     </div>
                 </article>
                 <article class="product icecream_twelve">
                     <img src="img/12.jpg" width="267px" height="267px" alt="Мятное мороженое"></img>
-                    <p class="price_icecream">420&#8381;<span>/кг</span></p>
+                    <p class="price_icecream">420<span class="rub"></span><span>/кг</span></p>
                     <a class="description_link">Сливочное с мятным сиропом</a>
                     <div class="hover_product">
                         <button class="btn hover_icecream">Быстрый просмотр</button>
@@ -289,8 +292,8 @@
 
         <ul class="footer_info">
             <li><a class="info_link">Для поставщиков</a></li>
-            <li><a class="info_link">О производстве</a></li>
             <li><a class="info_link">Наши документы</a></li>
+            <li><a class="info_link">О производстве</a></li>
             <li><a class="info_link">Экологические стандарты</a></li>
         </ul>
 
