@@ -17,13 +17,14 @@
         </a>
         <nav class="main_navigation">
             <ul class="site_navigation">
-                <li><a class="catalog_btn" href=#>Каталог</a></li>
-                <ul class="main_menu">
-                    <li>Новинки</li>
-                    <li>Сливочное</li>
-                    <li>Щербеты</li>
-                    <li>Фруктовый лед</li>
-                    <li>Мелорин</li>
+                <li class="site_catalog"><a href="#">Каталог</a>
+                    <ul class="main_menu">
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="catalog.html">Сливочное</a></li>
+                        <li><a href="#">Щербеты</a></li>
+                        <li><a href="#">Фруктовый лед</a></li>
+                        <li><a href="#">Мелорин</a></li>
+                </li>
                 </ul>
                 <li><a href=#>Доставка и оплата</a></li>
                 <li><a href=#>О Компании</a></li>
@@ -31,7 +32,7 @@
         </nav>
         <ul class="user_navigation">
             <li>
-                <button class="header_btn" type="button"></button>
+                <button class="search_btn" type="button"></button>
                 <div class="search_hover">
                     <form>
                         <input type="text" placeholder="Что ищем?">
@@ -82,7 +83,7 @@
                 </div>
             </li>
         </ul>
-        
+
         <div class="communication_info">
             <p><span>С 10 до 20, ежедневно
                 </span><br> 8 812 450-25-25
@@ -107,76 +108,72 @@
 
     <main>
         <h2>Сливочное мороженое</h2>
-        
+
         <div class="filters">
-           <form class="filter" method="get">
-               <fieldset>
-                   <legend>Сортировка:</legend>
-                   <select name="sorting">
+            <form class="filter" method="get">
+                <fieldset>
+                    <legend>Сортировка:</legend>
+                    <select name="sorting">
                        <option value="popular">по популярности</option>
                        <option value="popular">сначала недорогие</option>
                        <option value="popular">сначала дорогие</option>
                        <option value="popular">по жирности</option>
                    </select>
-               </fieldset>
-               <fieldset>
-                   <legend>Цена: 100 руб. - 500 руб.</legend>
-                   <input type="range" name="price" min="100" max="500" step="80">
-               </fieldset>
-               <fieldset>
-                   <legend>Жирность:</legend>
-                   <ul class="radio_filter">
-                       <li class="filter_option">
-                           <input type="radio" class="option_item filter_input_radio" name="fat_option"
-                           value="zero" id="zero_fat">
-                           <label for="zero_fat">0%</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="radio" class="option_item filter_input_radio" name="fat_option"
-                           value="ten" id="ten_fat" checked>
-                           <label for="ten_fat">10%</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="radio" class="option_item filter_input_radio" name="fat_option"
-                           value="thirty" id="thirty_fat">
-                           <label for="thirty_fat">до 30%</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="radio" class="option_item filter_input_radio" name="fat_option"
-                           value="more_thirty" id="more_thirty_fat">
-                           <label for="more_thirty_fat">более 30%</label>
-                       </li>
-                   </ul>
-               </fieldset>
-               <fieldset>
-                   <legend>Наполнители:</legend>
-                   <ul class="checkbox_filter">
-                       <li class="filter_option">
-                           <input type="checkbox" class="option_item filter_input_checkbox" name="chocolate" id="chocolate" checked>
-                           <label for="chocolate">шоколадные</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="checkbox" class="option_item filter_input_checkbox" name="sugar-powders" id="sugar-powders" checked>
-                           <label for="sugar-powders">сахарные присыпки</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="checkbox" class="option_item filter_input_checkbox" name="fruits" id="fruits">
-                           <label for="fruits">фрукты</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="checkbox" class="option_item filter_input_checkbox" name="syrups" id="syrups">
-                           <label for="syrups">сиропы</label>
-                       </li>
-                       <li class="filter_option">
-                           <input type="checkbox" class="option_item filter_input_checkbox" name="jams" id="jams">
-                           <label for="jams">джемы</label>
-                       </li>
-                   </ul>
-               </fieldset>
-           <button class="filter_btn">Применить</button>
-           </form>
+                </fieldset>
+                <fieldset>
+                    <legend>Цена: 100 руб. - 500 руб.</legend>
+                    <input type="range" name="price" min="100" max="500" step="80">
+                </fieldset>
+                <fieldset>
+                    <legend>Жирность:</legend>
+                    <ul class="radio_filter">
+                        <li class="filter_option">
+                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="zero" id="zero_fat">
+                            <label for="zero_fat">0%</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="ten" id="ten_fat" checked>
+                            <label for="ten_fat">10%</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="thirty" id="thirty_fat">
+                            <label for="thirty_fat">до 30%</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="more_thirty" id="more_thirty_fat">
+                            <label for="more_thirty_fat">более 30%</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Наполнители:</legend>
+                    <ul class="checkbox_filter">
+                        <li class="filter_option">
+                            <input type="checkbox" class="option_item filter_input_checkbox" name="chocolate" id="chocolate" checked>
+                            <label for="chocolate">шоколадные</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="checkbox" class="option_item filter_input_checkbox" name="sugar-powders" id="sugar-powders" checked>
+                            <label for="sugar-powders">сахарные присыпки</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="checkbox" class="option_item filter_input_checkbox" name="fruits" id="fruits">
+                            <label for="fruits">фрукты</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="checkbox" class="option_item filter_input_checkbox" name="syrups" id="syrups">
+                            <label for="syrups">сиропы</label>
+                        </li>
+                        <li class="filter_option">
+                            <input type="checkbox" class="option_item filter_input_checkbox" name="jams" id="jams">
+                            <label for="jams">джемы</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button class="filter_btn">Применить</button>
+            </form>
         </div>
-        
+
         <div class="icecream">
             <div class="catalog_icecream">
                 <article class="product icecream_one">
@@ -277,13 +274,15 @@
                 </article>
             </div>
         </div>
-        
+
         <ul class="pages">
             <li>
                 <a class="page" href="#">&lt;</a>
             </li>
             <li>
-                <div class="one_page"><p>1</p></div>
+                <div class="one_page">
+                    <p>1</p>
+                </div>
             </li>
             <li>
                 <a class="page" href="#">2</a>
@@ -301,7 +300,7 @@
                 <a class="page" href="#">&gt;</a>
             </li>
         </ul>
-        
+
     </main>
 
     <footer class="main_footer">

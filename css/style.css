@@ -17,6 +17,16 @@ body.catalog_html {
     background-image: linear-gradient(to bottom, #9cb0a5 10%, #849d8f 90%)
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header, main, footer {
+    width: 1200px;
+    margin 0 auto;
+}
+
 a {
     font: inherit;
     text-decoration: none;
@@ -28,6 +38,7 @@ input[type="textarea"] {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    box-sizing: border-box;
     color: #323232;
     border-radius: 5px;
     border: none;
@@ -73,52 +84,6 @@ h2 {
     box-shadow: inset 0 1px 1px 1px #ac1000;
 }
 
-.catalog_btn a {
-    background-color: #d07058;
-    border-radius: 20px;
-    padding: 5px 17px;
-}
-
-.catalog_btn a:hover {
-    background-color: #f7f6f3;
-    color: #333333;
-}
-
-ul.site_navigation li:first-child a:active {
-    box-shadow: inset 0px 1px 1px 1px #696969;
-}
-
-header.main_header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-a.main_header_logo {
-    margin-left: 27px;
-}
-
-nav.main_navigation {
-    margin-left: 23px;
-}
-
-ul.site_navigation {
-    display: flex;
-}
-
-ul.main_menu {
-    list-style: none;
-}
-
-.main_navigation {
-    font-size: 16px;
-    line-height: 18px;
-    color: #ffffff;
-}
-
-div.communication_info {
-    margin-left: auto;
-}
-
 .site_navigation,
 .user_navigation {
     list-style: none;
@@ -138,6 +103,153 @@ div.communication_info {
     color: #333333;
 }
 
+header.main_header {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+
+a.main_header_logo {
+    width: 154px;
+    height: 64px;
+    padding-left: 27px;
+}
+
+nav.main_navigation {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+ul.site_navigation {
+    display: flex;
+    padding-left: 8px;
+}
+
+ul.site_navigation li a {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+ul.site_navigation li a:active {
+    box-shadow: inset 0px 1px 1px 1px #696969;
+}
+
+ul.site_navigation li.site_catalog {
+    position: relative;
+}
+
+ul.site_navigation ul.main_menu {
+    display: none;
+    position: absolute;
+    width: 145px;
+    background-color: #f8f7f4;
+    height: 170px;
+    top: 32px;
+    left: -5px;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+ul.main_menu a {
+    font: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+    margin-top: -5px;
+}
+
+ul.main_menu {
+    box-shadow: 0px 15px 25px 1px #58685f;
+}
+
+ul.main_menu li {
+    display: block;
+    padding: 6px 10px;
+    list-style: none;
+}
+
+ul.main_menu li:first-child {
+    border-radius: 5px 5px 0px 0px;
+}
+
+ul.main_menu li:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+ul.main_menu li:hover {
+    background-color: #fbded8;
+}
+
+ul.main_menu a:hover {
+    background-color: #fbded8;
+}
+
+ul.main_menu li:first-child a {
+    margin-top: 0px;
+    margin-bottom: 1px;
+    font-weight: 700;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.site_catalog:hover .main_menu {
+    display: block;
+}
+
+div.communication_info {
+    margin-left: auto;
+}
+
+ul.user_navigation {
+    display: flex;
+    position: relative;
+}
+
+button.search_btn {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #a5baae;
+    border: none;
+    padding-top: 5px;
+}
+
+button.search_btn:hover {
+    background-color: #f8f7f4;
+}
+
+button.search_btn:hover path {
+    fill: #333333;
+}
+
+li.search:hover div.search_hover {
+    display: block;
+}
+
+div.search_hover {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 445px;
+    width: 340px;
+    height: 85px;
+    background-color: #f8f7f4;
+    box-shadow: 0px 15px 25px 1px #58685f;
+    border-radius: 5px;
+}
+
+div.search_hover input {
+    width: 310px;
+    height: 44px;
+    padding-left: 13px;
+    margin: 20px 15px;
+}
+
 button.header_btn {
     color: #ffffff;
     font-size: 14px;
@@ -146,6 +258,7 @@ button.header_btn {
     background-color: #9db1a5;
     padding: 5px 15px;
     border-radius: 20px;
+    border: none;
 }
 
 div.basket_hover {
