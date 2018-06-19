@@ -24,12 +24,20 @@ img {
 
 header, main, footer {
     width: 1200px;
-    margin 0 auto;
+    margin: 0 auto;
 }
 
 a {
     font: inherit;
     text-decoration: none;
+}
+
+.visually_hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 input[type="text"],
@@ -43,6 +51,7 @@ input[type="textarea"] {
     border-radius: 5px;
     border: none;
     outline: none;
+    border: 1px solid #d3d3d2;
 }
 
 input[type="text"]:hover,
@@ -202,12 +211,21 @@ ul.main_menu li:first-child a {
 
 div.communication_info {
     margin-left: auto;
+    margin-right: 27px;
+    margin-top: -25px;
 }
 
 ul.user_navigation {
+    margin-left: 336px; 
     display: flex;
     position: relative;
+    margin-right: 27px;
 }
+
+ul.user_navigation li {
+    margin-left: 10px;
+}
+
 
 button.search_btn {
     display: block;
@@ -219,15 +237,22 @@ button.search_btn {
     padding-top: 5px;
 }
 
-button.search_btn:hover {
+button.search_btn:hover,
+button.header_btn:hover,
+button.header_basket:hover {
     background-color: #f8f7f4;
+    color: #323232;
 }
 
-button.search_btn:hover path {
+button.search_btn:hover path,
+button.header_btn:hover path,
+button.header_basket:hover path,
+button.header_basket:hover g {
     fill: #333333;
 }
 
-li.search:hover div.search_hover {
+li.search:hover div.search_hover,
+li.enter:hover div.login_hover {
     display: block;
 }
 
@@ -235,7 +260,7 @@ div.search_hover {
     display: none;
     position: absolute;
     top: 35px;
-    right: 445px;
+    right: 212px;
     width: 340px;
     height: 85px;
     background-color: #f8f7f4;
@@ -245,20 +270,93 @@ div.search_hover {
 
 div.search_hover input {
     width: 310px;
-    height: 44px;
+    height: 42px;
     padding-left: 13px;
     margin: 20px 15px;
 }
 
 button.header_btn {
+    position: relative;
+    display: inline-block;
+    width: 92px;
+    height: 32px;
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    background-color: #9db1a5;
-    padding: 5px 15px;
+    background-color: #a5baae;
     border-radius: 20px;
     border: none;
+}
+
+button.header_btn svg {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+}
+
+span.name_enter {
+    position: absolute;
+    top: 8px;
+    left: 43px;
+}
+
+div.login_hover {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 109px;
+    width: 278px;
+    height: 214px;
+    background-color: #f8f7f4;
+    box-shadow: 0px 15px 25px 1px #58685f;
+    border-radius: 5px;
+}
+
+div.login_hover input {
+    width: 240px;
+    height: 42px;
+    padding-left: 13px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+div.login_hover p {
+    margin: 0;
+    padding: 0;
+}
+
+div.login_hover button.enter_btn {
+    margin-top: 20px;
+    margin-left: 20px;
+    outline: 0;
+    border: 0;
+}
+
+div.login_hover a {
+    display: inline-block;
+    font: inherit;
+    color: #323232;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;  
+}
+
+div.login_hover div.help_box {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 17px;
+    width: 130px;
+}
+
+button.header_basket {
+    width: 100px;
+}
+
+button.header_basket span.basket_name {
+    position: absolute;
+    top: 8px;
+    left: 45px;
 }
 
 div.basket_hover {
