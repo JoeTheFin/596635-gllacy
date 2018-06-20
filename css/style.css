@@ -135,10 +135,14 @@ ul.site_navigation {
     padding-left: 8px;
 }
 
-ul.site_navigation li a {
+ul.site_navigation a {
     display: block;
     padding: 5px 10px;
     border-radius: 15px;
+}
+
+ul.site_navigation a.catalog_here {
+    background-color: #d07058;
 }
 
 ul.site_navigation li a:active {
@@ -205,14 +209,9 @@ ul.main_menu li:first-child a {
     border-radius: 10px 10px 0px 0px;
 }
 
-.site_catalog:hover .main_menu {
+.site_catalog:hover .main_menu,
+.site_catalog:focus .main_menu {
     display: block;
-}
-
-div.communication_info {
-    margin-left: auto;
-    margin-right: 27px;
-    margin-top: -25px;
 }
 
 ul.user_navigation {
@@ -222,10 +221,13 @@ ul.user_navigation {
     margin-right: 27px;
 }
 
+body.catalog_html ul.user_navigation {
+    margin-left: 317px; 
+}
+
 ul.user_navigation li {
     margin-left: 10px;
 }
-
 
 button.search_btn {
     display: block;
@@ -252,7 +254,8 @@ button.header_basket:hover g {
 }
 
 li.search:hover div.search_hover,
-li.enter:hover div.login_hover {
+li.enter:hover div.login_hover,
+li.basket:hover div.basket_hover {
     display: block;
 }
 
@@ -266,6 +269,10 @@ div.search_hover {
     background-color: #f8f7f4;
     box-shadow: 0px 15px 25px 1px #58685f;
     border-radius: 5px;
+}
+
+body.catalog_html div.search_hover {
+    right: 230px;
 }
 
 div.search_hover input {
@@ -313,6 +320,10 @@ div.login_hover {
     border-radius: 5px;
 }
 
+body.catalog_html div.login_hover {
+    right: 127px;
+}
+
 div.login_hover input {
     width: 240px;
     height: 42px;
@@ -356,16 +367,43 @@ button.header_basket {
 button.header_basket span.basket_name {
     position: absolute;
     top: 8px;
-    left: 45px;
+    left: 43px;
+}
+
+button.catalog_basket::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/basket-red.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 div.basket_hover {
+    display: non;
+    position: absolute;
+    top: 35px;
+    right: 1px;
     width: 541px;
+    height: 243px;
     background-color: #f8f7f4;
     color: #323232;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
+    border-radius: 5px;
+    box-shadow: 0px 15px 25px 1px #58685f;
+}
+
+button.catalog_basket {
+    position: relative;
+    width: 119px;
+    padding-left: 43px;
+    background-color: #f8f7f4;
+    color: #323232;
 }
 
 div.basket_hover table tr:last-child {
@@ -374,13 +412,88 @@ div.basket_hover table tr:last-child {
     font-weight: 700;
 }
 
-button.table_basket {
-    color: #323232;
-    background-color: #f7f6f3;
+button.btn_basket {
+    margin-left: 355px;
+    border: none;
+    padding: 12px 15px;
+    outline: none;
+}
+
+button.btn_basket:active {
+    outline: none;
+}
+
+table {
+    width: 510px;
+    height: 150px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+tr.line_two td:nth-child(3) {
+    vertical-align: middle;
+}
+
+table span.grey_color {
+    color: #9f9f9f;
+}
+
+tr.line_one td:first-child,
+tr.line_two td:first-child {
+    width: 21px;
+}
+
+td button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    background-color: #f8f7f4;
+    background-image: url("../img/cross-small.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+tr.line_one img,
+tr.line_two img {
+    border-radius: 50%;
+}
+
+tr.line_two td:nth-child(4),
+tr.line_two td:last-child {
+    padding-bottom: 15px;
+}
+
+tr td:nth-child(4) {
+    padding-right: 20px;
+}
+
+table td.all_send {
+    padding-top: 10px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: right;
+    border-top: 1px solid #cacac7;
+}
+
+div.breadcrumb {
+    margin-left: 27px;
+    margin-right: auto;
 }
 
 .breadcrumb li {
     display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .breadcrumb a {
@@ -391,15 +504,24 @@ button.table_basket {
     color: #f7f6f3;
 }
 
-.communication_info p {
-    color: #ffffff;
-    font-size: 22px;
-    line-height: 24px;
+div.communication_info {
+    margin-left: auto;
+    margin-right: 27px;
+    margin-top: -25px;
 }
 
-.communication_info span {
-    font-size: 16px;
-    line-height: 18px;
+div.communication_info span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: right;
+}
+
+div.communication_info p {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: right;
 }
 
 .slider_box ul {
