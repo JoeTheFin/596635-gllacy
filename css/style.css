@@ -33,11 +33,11 @@ a {
 }
 
 .visually_hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 input[type="text"],
@@ -116,6 +116,7 @@ header.main_header {
     display: flex;
     flex-wrap: wrap;
     padding-top: 8px;
+    position: relative;
 }
 
 a.main_header_logo {
@@ -215,7 +216,7 @@ ul.main_menu li:first-child a {
 }
 
 ul.user_navigation {
-    margin-left: 336px; 
+    margin-left: auto; 
     display: flex;
     position: relative;
     margin-right: 27px;
@@ -383,7 +384,7 @@ button.catalog_basket::before {
 }
 
 div.basket_hover {
-    display: non;
+    display: none;
     position: absolute;
     top: 35px;
     right: 1px;
@@ -443,11 +444,6 @@ table span.grey_color {
     color: #9f9f9f;
 }
 
-tr.line_one td:first-child,
-tr.line_two td:first-child {
-    width: 21px;
-}
-
 td button {
     display: block;
     margin: 0;
@@ -486,8 +482,8 @@ table td.all_send {
 }
 
 div.breadcrumb {
-    margin-left: 27px;
-    margin-right: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .breadcrumb li {
@@ -508,6 +504,9 @@ div.communication_info {
     margin-left: auto;
     margin-right: 27px;
     margin-top: -25px;
+    position: absolute;
+    right: 0px;
+    top: 67px;
 }
 
 div.communication_info span {
