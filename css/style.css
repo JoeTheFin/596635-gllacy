@@ -43,6 +43,7 @@ a {
 input[type="text"],
 input[type="password"],
 input[type="textarea"] {
+    font: inherit;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -178,6 +179,7 @@ ul.main_menu a {
 
 ul.main_menu {
     box-shadow: 0px 15px 25px 1px #58685f;
+    z-index: 1;
 }
 
 ul.main_menu li {
@@ -198,6 +200,15 @@ ul.main_menu li:hover {
     background-color: #fbded8;
 }
 
+ul.main_menu li:active {
+    background-color: #f6b5a5;
+}
+
+ul.main_menu li:active a {
+    background-color: #f6b5a5;
+    box-shadow: none;
+}
+
 ul.main_menu a:hover {
     background-color: #fbded8;
 }
@@ -208,6 +219,20 @@ ul.main_menu li:first-child a {
     font-weight: 700;
     display: block;
     border-radius: 10px 10px 0px 0px;
+}
+
+ul.main_menu li.link_active {
+    background-color: #d07058;
+}
+
+li.link_active a {
+    color: #ffffff;
+}
+
+li.link_active a:hover,
+li.link_active a:active {
+    color: #ffffff;
+    background-color: #d07058;
 }
 
 .site_catalog:hover .main_menu,
@@ -433,15 +458,41 @@ table {
 }
 
 td {
-    vertical-align: middle;
-}
-
-tr.line_two td:nth-child(4) {
-    vertical-align: top;
+    vertical-align: baseline;
 }
 
 table span.grey_color {
     color: #9f9f9f;
+}
+
+tr.line_one img,
+tr.line_two img {
+    display: block;
+    border-radius: 50%;
+}
+
+tr.line_one td:first-child,
+tr.line_two td:first-child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+tr td:nth-child(3) {
+    width: 210px;
+}
+
+tr.line_one td:last-child,
+tr.line_two td:last-child {
+    padding-right: 5px;
+}
+
+table td.all_send {
+    padding-top: 10px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: right;
+    border-top: 1px solid #cacac7;
 }
 
 td button {
@@ -459,42 +510,17 @@ td button {
     cursor: pointer;
 }
 
-tr.line_one img,
-tr.line_two img {
-    border-radius: 50%;
-}
-
-tr.line_two td:nth-child(4),
-tr.line_two td:last-child {
-    padding-top: 10px;
-    vertical-align: top;
-}
-
-tr td:nth-child(4) {
-    padding-right: 10px;
-}
-
-tr.line_one td:last-child,
-tr.line_two td:last-child {
-    padding-right: 15px;
-}
-
-table td.all_send {
-    padding-top: 10px;
-    width: 100%;
-    vertical-align: middle;
-    text-align: right;
-    border-top: 1px solid #cacac7;
-}
-
 div.breadcrumb {
     padding: 0;
-    margin: 0;
+    margin-top: 10x;
+    margin-left: -12px;
+    margin-bottom: -10px;
 }
 
 .breadcrumb li {
+    position: relative;
     display: inline-block;
-    padding: 0;
+    padding-right: 5px;
     margin: 0;
 }
 
@@ -504,12 +530,29 @@ div.breadcrumb {
     line-height: 16px;
     font-weight: 400;
     color: #f7f6f3;
+    padding-right: 10px;
+}
+
+.breadcrumb li:first-child::after {
+    content: "»";
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+}
+
+.breadcrumb li:nth-child(2)::after {
+    content: "»";
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    right: 2px;
 }
 
 div.communication_info {
     margin-left: auto;
     margin-right: 27px;
-    margin-top: -25px;
+    margin-top: 0px;
     position: absolute;
     right: 0px;
     top: 67px;
@@ -524,10 +567,17 @@ div.communication_info span {
 }
 
 div.communication_info p {
+    margin: 0;
     font-size: 22px;
     line-height: 24px;
     font-weight: 700;
     text-align: right;
+}
+
+h2.name_icecream {
+    margin: 0;
+    padding-left: 27px;
+    margin-bottom: 35px;
 }
 
 .slider_box ul {
@@ -677,6 +727,10 @@ section.sale_two p {
     padding-left: 18px;
 }
 
+article.product {
+    position: relative;
+}
+
 div.price_list,
 div.catalog_icecream {
     display: flex;
@@ -690,8 +744,23 @@ div.icecream img {
     border-radius: 50%;
 }
 
+div.hits p::before {
+    content: "";
+    position: absolute;
+    bottom: 200px;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    background-image: url("../img/hit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
 p.price_hit,
 p.price_icecream {
+    position: absolute;
+    top: 165px;
     color: #ffffff;
     font-size: 45px;
     line-height: 45px;
@@ -716,7 +785,10 @@ p.price_icecream span {
 
 div.hits a,
 div.icecream a {
+    display: block;
+    margin-top: 5px;
     font: inherit;
+    text-align: center;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -727,6 +799,29 @@ div.hits a:active,
 div.icecream a:hover,
 div.icecream a:active {
     color: #ffbc9e;
+}
+
+article.product:hover div.product_hover {
+    display: block;
+}
+
+div.product_hover {
+    position: absolute;
+    display: none;
+    top: -10px;
+    left: -13px;
+    width: 293px;
+    height: 405px;
+    background-color: rgba(132,157,143,0.1);
+    border-radius: 10px;
+    box-shadow: 0px 15px 35px 1px #58685f;
+    z-index: 1;
+}
+
+button.hover_icecream {
+    border: none;
+    margin-top: 340px;
+    margin-left: 46px;
 }
 
 div.info_box {
