@@ -787,6 +787,7 @@ div.hits a,
 div.icecream a {
     display: block;
     margin-top: 5px;
+    margin-bottom: 40px;
     font: inherit;
     text-align: center;
     font-size: 16px;
@@ -844,14 +845,50 @@ div.info_box h3 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     margin-left: 18px;
 }
 
 div.info_box p {
+    position: relative;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
+    margin-left: 5px;
+    padding-left: 45px;
+    margin-bottom: 8px;
+}
+
+div.info_box p.paragraph_2,
+div.info_box p.paragraph_4 {
+    margin-left: 10px;
+}
+
+div.info_box p::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    left: -13px;
+}
+
+div.info_box p.paragraph_1::before {
+    background-image: url("../img/ice-cream.svg");
+}
+
+div.info_box p.paragraph_2::before {
+    background-image: url("../img/cow.svg");
+}
+
+div.info_box p.paragraph_3::before {
+    background-image: url("../img/eco.svg");
+}
+
+div.info_box p.paragraph_4::before {
+    background-image: url("../img/ice-cream.svg");
 }
 
 div.news_box {
