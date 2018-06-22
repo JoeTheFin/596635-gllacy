@@ -25,6 +25,8 @@ img {
 header, main, footer {
     width: 1200px;
     margin: 0 auto;
+    padding: 0 27px;
+    box-sizing: border-box;
 }
 
 a {
@@ -123,13 +125,13 @@ header.main_header {
 a.main_header_logo {
     width: 154px;
     height: 64px;
-    padding-left: 27px;
 }
 
 nav.main_navigation {
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
+    width: 380px;
 }
 
 ul.site_navigation {
@@ -153,6 +155,7 @@ ul.site_navigation li a:active {
 
 ul.site_navigation li.site_catalog {
     position: relative;
+    border-bottom: 5px solid transparent;
 }
 
 ul.site_navigation ul.main_menu {
@@ -244,11 +247,6 @@ ul.user_navigation {
     margin-left: auto; 
     display: flex;
     position: relative;
-    margin-right: 27px;
-}
-
-body.catalog_html ul.user_navigation {
-    margin-left: 317px; 
 }
 
 ul.user_navigation li {
@@ -417,7 +415,7 @@ button.catalog_basket {
 }
 
 div.basket_hover {
-    display: non;
+    display: none;
     position: absolute;
     top: 35px;
     right: 1px;
@@ -511,10 +509,12 @@ td button {
 }
 
 div.breadcrumb {
-    padding: 0;
     margin-top: 10x;
-    margin-left: -12px;
     margin-bottom: -10px;
+}
+
+div.breadcrumb ul {
+    padding: 0;
 }
 
 .breadcrumb li {
@@ -551,10 +551,9 @@ div.breadcrumb {
 
 div.communication_info {
     margin-left: auto;
-    margin-right: 27px;
     margin-top: 0px;
     position: absolute;
-    right: 0px;
+    right: 27px;
     top: 67px;
     z-index: 0;
 }
@@ -576,7 +575,6 @@ div.communication_info p {
 
 h2.name_icecream {
     margin: 0;
-    padding-left: 27px;
     margin-bottom: 35px;
 }
 
@@ -725,13 +723,17 @@ section.sale_two {
 
 article.product {
     position: relative;
+    margin-right: 26px;
+}
+
+article.product:nth-child(4n) {
+    margin-right: 0;
 }
 
 div.price_list,
 div.catalog_icecream {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     margin-bottom: 40px;
 }
 
@@ -1091,7 +1093,7 @@ div.footer_social ul {
     width: 190px;
     list-style: none;
     margin: 0 auto;
-    padding-left: 27px;
+    padding: 0;
 }
 
 div.footer_social a.social_btn {
