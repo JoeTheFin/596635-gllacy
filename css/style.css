@@ -417,12 +417,11 @@ button.catalog_basket {
 }
 
 div.basket_hover {
-    display: none;
+    display: non;
     position: absolute;
     top: 35px;
     right: 1px;
     width: 541px;
-    height: 243px;
     background-color: #f8f7f4;
     color: #323232;
     font-size: 13px;
@@ -431,6 +430,7 @@ div.basket_hover {
     border-radius: 5px;
     box-shadow: 0px 15px 25px 1px #58685f;
     z-index: 1;
+    padding-bottom: 20px;
 }
 
 div.basket_hover table tr:last-child {
@@ -467,7 +467,7 @@ table span.grey_color {
 
 tr.line_one img,
 tr.line_two img {
-    display: block;
+    vertical-align: middle;
     border-radius: 50%;
 }
 
