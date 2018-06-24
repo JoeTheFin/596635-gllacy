@@ -82,18 +82,41 @@ h2 {
     padding: 12px 22px;
     background-image: linear-gradient(to bottom, #f26843, #e74b36);
     color: #ffffff;
-    box-shadow: 0 1px 1px 1px #9e4334;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border-radius: 30px;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .btn:hover {
-    background-image: linear-gradient(to bottom, #f58569, #ed705e);
-    box-shadow: 0 1px 1px 1px #ac1000;
+    background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
     background-image: linear-gradient(to bottom, #d84732, #e1613e);
-    box-shadow: inset 0 1px 1px 1px #ac1000;
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+div.background {
+    background-color: #849d8f;
+    background-image: url("../img/Мороженко 1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+div.background::before,
+div.background::after {
+    content: "";
+    visibility: hidden;
+}
+
+div.background::before {
+    background-image: url("../img/Мороженко 2.png");
+}
+
+div.background::after {
+    background-image: url("../img/Мороженко 3.png");
 }
 
 .site_navigation,
@@ -131,7 +154,7 @@ nav.main_navigation {
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
-    width: 380px;
+    width: 680px;
 }
 
 ul.site_navigation {
@@ -163,12 +186,14 @@ ul.site_navigation ul.main_menu {
     position: absolute;
     width: 145px;
     background-color: #f8f7f4;
-    height: 170px;
+    min-height: 172px;
     top: 32px;
     left: -5px;
     padding: 0;
     margin: 0;
     border-radius: 5px;
+    box-shadow: 0px 15px 25px 1px #58685f;
+    z-index: 1;
 }
 
 ul.main_menu a {
@@ -178,17 +203,17 @@ ul.main_menu a {
     font-weight: 400;
     color: #323232;
     margin-top: -5px;
-}
-
-ul.main_menu {
-    box-shadow: 0px 15px 25px 1px #58685f;
-    z-index: 1;
+    border-radius: 0;
 }
 
 ul.main_menu li {
     display: block;
-    padding: 6px 10px;
+    padding: 7px 9px;
     list-style: none;
+}
+
+ul.main_menu li:nth-child(2) a {
+    border-top: 1px solid #d1d0ce;
 }
 
 ul.main_menu li:first-child {
@@ -578,21 +603,90 @@ h2.name_icecream {
     margin-bottom: 35px;
 }
 
-.slider_box ul {
-    list-style: none;
+section.slider {
+    position: relative;
     text-align: center;
+    padding-top: 321px;
+}
+
+section.slider ul.slider_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+section.slider li.slide {
+    display: none;
+    margin-bottom: 40px;
+}
+
+#product1:checked ~ .background #slide1,
+#product2:checked ~ .background #slide2,
+#product3:checked ~ .background #slide3 {
+    display: block;
+}
+
+#product1:checked ~ .background label[for="product1"],
+#product2:checked ~ .background label[for="product2"],
+#product3:checked ~ .background label[for="product3"] {
+    background-color: #ffffff;
+}
+
+#product1:checked ~ .background {
+    background-color: #849d8f;
+    background-image: url("../img/Мороженко 1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#product2:checked ~ .background {
+    background-color: #8996a6;
+    background-image: url("../img/Мороженко 2.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#product3:checked ~ .background {
+    background-color: #9d8b84;
+    background-image: url("../img/Мороженко 3.png");
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .slider p {
-    color: #ffffff;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 27px;
     font-size: 60px;
-    line-height: 61px;
+    line-height: 60px;
+    font-weight: 800;
+    color: #ffffff;
 }
 
 a.slider_btn {
     font: inherit;
     font-size: 32px;
     padding: 22px 40px;
+}
+
+div.slider_controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: top;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+div.slider_controls {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 0px;
 }
 
 div.filters {
@@ -890,7 +984,7 @@ div.info_box p.paragraph_3::before {
 }
 
 div.info_box p.paragraph_4::before {
-    background-image: url("../img/ice-cream.svg");
+    background-image: url("../img/thermometer.svg");
 }
 
 div.news_box {
@@ -1056,24 +1150,76 @@ ul.pages li:first-child a {
     color: #9aaea3;
 }
 
+div.modal_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0,0,0,0.3);
+}
+
 section.modal {
+    display: none;
+    position: fixed;
     width: 480px;
     height: 443px;
     background-color: #f8f7f4;
     border-radius: 15px;
-    padding-top: 18px;
-    padding-left: 23px;
+    padding: 18px 25px;
+    box-sizing: border-box;
+    top: 25%;
+    left: 50%;
+    z-index: 3;
+    margin-left: -240px;
 }
 
 section.modal h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
     color: #323232;
+    margin-bottom: 20px;
+}
+
+section.modal button.modal_close {
+    position: absolute;
+    background-color: inherit;
+    background-image: url("../img/cross-big.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    right: -7px;
+    outline: none;
+    border: none;
+}
+
+section.modal input[type="text"] {
+    width: 265px;
+    padding: 10px 13px;
+    margin-bottom: 10px;
+}
+
+section.modal textarea{
+    width: 428px;
+    height: 155px;
+    box-sizing: border-box;
+    padding: 10px 13px;
+    resize: none;
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px solid #d3d3d2;
 }
 
 section.modal .modal_btn{
-    outline: none;
+    margin-left: 295px;
+    border: none;
 }
 
 footer.main_footer {
@@ -1178,8 +1324,11 @@ li.provider::before {
     left: 18px;
 }
 
-div.footer_copyright p {
+div.footer_copyright {
     position: relative;
+}
+
+div.footer_copyright p {
     margin-top: 60px;
     font-size: 12px;
     line-height: 18px;
@@ -1187,14 +1336,13 @@ div.footer_copyright p {
     color: #fefefe;
 }
 
-div.footer_copyright p::before {
-    content: "";
+div.footer_copyright a.html_link {
     position: absolute;
+    top: 17px;
     width: 110px;
     height: 40px;
     background-image: url("../img/logo-htmlacademy-small.png");
     background-repeat: no-repeat;
-    bottom: 20px;
 }
 
 p a.html_academy_text {

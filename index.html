@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    
+    <input class="visually_hidden" type="radio" id="product1" name="toggle" checked>
+    <input class="visually_hidden" type="radio" id="product2" name="toggle">
+    <input class="visually_hidden" type="radio" id="product3" name="toggle">
+    
+    <div class="background">
 
     <header class="main_header">
         <a class="main_header_logo">
@@ -77,36 +83,30 @@
     </header>
 
     <main>
+       
         <h1 class="visually_hidden">Интернет-магазин мороженого GllacyShop</h1>
 
-        <div class="slider_box">
-            <ul>
-                <li>
-                    <!-- <input type="radio" name="slider" id="slider_one" checked>
-                    <label for="slider_one"></label> -->
-                    <div class="slider slider_one_box">
-                        <p>Крем-брюле и пломбир<br> с малиновым джемом</p>
-                        <a class="btn slider_btn" href="#">Давайте оба!</a>
-                    </div>
+        <section class="slider">
+            <div class="slider_controls">
+                <label for="product1">Первый</label>
+                <label for="product2">Второй</label>
+                <label for="product3">Третий</label>
+            </div>
+            <ul class="slider_list">
+                <li class="slide slider_item" id="slide1">
+                    <p>Крем-брюле и пломбир<br> с малиновым джемом</p>
+                    <a class="btn slider_btn" href="#">Давайте оба!</a>
                 </li>
-                <li>
-                    <!-- <input type="radio" name="slider" id="slider_two">
-                    <label for="slider_two"></label> -->
-                    <div class="slider slider_two_box">
-                        <p>Шоколадный пломбир<br> и лимонный сорбет</p>
-                        <a class="btn slider_btn" href="#">Давайте оба!</a>
-                    </div>
+                <li class="slide slider_item" id="slide2">
+                    <p>Шоколадный пломбир<br> и лимонный сорбет</p>
+                    <a class="btn slider_btn" href="#">Давайте оба!</a>
                 </li>
-                <li>
-                    <!-- <input type="radio" name="slider" id="slider_three">
-                    <label for="slider_three"></label> -->
-                    <div class="slider slider_three_box">
-                        <p>Пломбир с помадкой<br> и клубничный щербет</p>
-                        <a class="btn slider_btn" href="#">Давайте оба!</a>
-                    </div>
+                <li class="slide slider_item" id="slide3">
+                    <p>Пломбир с помадкой<br> и клубничный щербет</p>
+                    <a class="btn slider_btn" href="#">Давайте оба!</a>
                 </li>
             </ul>
-        </div>
+        </section>
 
         <div class="sale_box">
             <section class="sale sale_one">
@@ -198,8 +198,9 @@
             </section>
         </div>
 
-        <section class="modal send_modal">
-            <h2>Мы обязательно вам ответим!</h2>
+        <section class="modal">
+            <h2>Мы обязательно вам ответим!
+                <button class="modal_close" type="button"></button></h2>
             <form class="modal_form" method="post" action="https://echo.htmlacademy.ru">
                 <p><input type="text" placeholder="Как вас зовут?" id="modal_name">
                     <label class="visually_hidden" for="modal_name">Как вас зовут?</label>
@@ -207,13 +208,13 @@
                 <p><input type="text" placeholder="Ваша почта для ответа?" id="modal_email">
                     <label class="visually_hidden" for="modal_name">Ваша почта для ответа?</label>
                 </p>
-                <p><input type="textarea" placeholder="Напишите что-нибудь..." id="modal_comment" rows="6">
+                <p><textarea placeholder="Напишите что-нибудь..." id="modal_comment"></textarea>
                     <label class="visually_hidden" for="modal_name">Напишите что-нибудь...</label>
                 </p>
                 <button class="btn modal_btn">Отправить</button>
             </form>
-            <span class="modal_close">x</span>
         </section>
+        <div class="modal_overlay"></div>
     </main>
 
     <footer class="main_footer">
@@ -228,18 +229,20 @@
         </div>
 
         <ul class="footer_info">
-            <li><a class="info_link">Для поставщиков</a></li>
+            <li class="provider"><a class="info_link">Для поставщиков</a></li>
             <li><a class="info_link">Наши документы</a></li>
             <li><a class="info_link">О производстве</a></li>
             <li><a class="info_link">Экологические стандарты</a></li>
         </ul>
 
         <div class="footer_copyright">
-            <a class="html_academy_img" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually_hidden">html academy</span></a>
+            <a class="html_link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually_hidden">html academy</span></a>
             <p>Сделано в <span><a class="html_academy_text" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></span> &#169; 2017</p>
         </div>
 
     </footer>
+
+    </div>
 
 </body>
 
