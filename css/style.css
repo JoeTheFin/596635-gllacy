@@ -283,11 +283,15 @@ button.search_btn {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #a5baae;
     border: none;
     padding-top: 5px;
 }
 
+button.search_btn,
+button.header_btn,
+button.header_basket {
+    background-color: rgba(255,255,255,0.3);
+}
 button.search_btn:hover,
 button.header_btn:hover,
 button.header_basket:hover {
@@ -340,7 +344,6 @@ button.header_btn {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    background-color: #a5baae;
     border-radius: 20px;
     border: none;
 }
@@ -1225,7 +1228,7 @@ section.modal .modal_btn{
 footer.main_footer {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #a9bbb1;
+    border-top: 1px solid rgba(255,255,255,0.3);
 }
 
 div.footer_social {
@@ -1253,7 +1256,7 @@ div.footer_social a.social_btn {
 
 a.social_btn svg {
     border-radius: 50%;
-    border: 3px solid #c2cec7; 
+    border: 3px solid rgba(255,255,255,0.3); 
 }
 
 a.social_btn svg:hover,
