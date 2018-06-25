@@ -154,7 +154,6 @@ nav.main_navigation {
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
-    width: 680px;
 }
 
 ul.site_navigation {
@@ -370,6 +369,7 @@ div.login_hover {
     background-color: #f8f7f4;
     box-shadow: 0px 15px 25px 1px #58685f;
     border-radius: 5px;
+    z-index: 1;
 }
 
 body.catalog_html div.login_hover {
@@ -935,8 +935,6 @@ div.info_box {
     background-position: bottom;
     border-radius: 15px;
     color: #323232;
-    margin-left: 27px;
-    margin-right: 27px;
     margin-bottom: 40px;
 }
 
@@ -1064,6 +1062,18 @@ div.content_send input {
 
 div.map_box {
     position: relative;
+    background-image: url(../img/map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 430px;
+}
+
+div.map_box iframe {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    margin-left: -50%;
+    width: 100vw;
 }
 
 section.contacts {
@@ -1164,6 +1174,20 @@ div.modal_overlay {
     background: rgba(0,0,0,0.3);
 }
 
+@keyframes shake {
+    0%, 100% {
+    transform: translateX(0);
+  }
+
+    10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+    20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 section.modal {
     display: none;
     position: fixed;
@@ -1223,6 +1247,14 @@ section.modal textarea{
 section.modal .modal_btn{
     margin-left: 295px;
     border: none;
+}
+
+.modal_show {
+    display: block;
+}
+
+.modal_error {
+  animation: shake 0.6s;
 }
 
 footer.main_footer {
