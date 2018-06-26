@@ -1,5 +1,6 @@
 var link = document.querySelector(".btn_feedback");
 var popup = document.querySelector(".modal");
+var overlay = document.querySelector(".modal_overlay");
 var close = popup.querySelector(".modal_close");
 var form = popup.querySelector("form");
 var yourName = popup.querySelector("[id=modal_name]");
@@ -17,6 +18,7 @@ try {
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal_show");
+    overlay.classList.add("modal_overlay_show");
     if (storage) {
       yourName.value = storage;
       email.focus();
@@ -29,6 +31,7 @@ close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal_show");
     popup.classList.remove("modal_error");
+    overlay.classList.remove("modal_overlay_show");
   });
 
 form.addEventListener("submit", function (evt) {
@@ -50,6 +53,7 @@ window.addEventListener("keydown", function (evt) {
       if (popup.classList.contains("modal_show")) {
         popup.classList.remove("modal_show");
         popup.classList.remove("modal_error");
+        overlay.classList.remove("modal_overlay_show");
       }
     }
   });
