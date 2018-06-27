@@ -44,31 +44,32 @@ a {
 
 input[type="text"],
 input[type="password"],
-input[type="textarea"],
+textarea,
 input[type="email"] {
     font: inherit;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: #323232;
-    outline: none;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
     box-sizing: border-box;
 }
 
 input[type="text"]:hover,
 input[type="password"]:hover,
-input[type="textarea"]:hover,
+textarea:hover,
 input[type="email"] {
-    outline: 2px solid #c7c6c5;
+    border: 2px solid #c7c6c5;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="textarea"]:focus,
+textarea:focus,
 input[type="email"] {
-    outline: 2px solid #8fbdec;
+    border: 2px solid #8fbdec;
 }
 
 h2 {
@@ -82,8 +83,9 @@ h2 {
     display: inline-block;
     padding: 12px 22px;
     font-size: 18px;
-    background-image: linear-gradient(to bottom, #f26843, #e74b36);
+    vertical-align: middle;
     color: #ffffff;
+    background-image: linear-gradient(to bottom, #f26843, #e74b36);
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border-radius: 30px;
@@ -160,13 +162,20 @@ nav.main_navigation {
 
 ul.site_navigation {
     display: flex;
+    flex-wrap: wrap;
     padding-left: 8px;
+    width: 500px;
 }
 
 ul.site_navigation a {
     display: block;
     padding: 5px 10px;
     border-radius: 15px;
+}
+
+ul.site_navigation a.menu_link {
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.5);
 }
 
 ul.site_navigation a.catalog_here {
@@ -279,6 +288,11 @@ ul.user_navigation li {
     margin-left: 10px;
 }
 
+ul.user_navigation li.search {
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+}
+
 button.search_btn {
     display: block;
     width: 32px;
@@ -341,6 +355,7 @@ button.header_btn {
     display: inline-block;
     width: 92px;
     height: 32px;
+    vertical-align: middle;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
@@ -394,7 +409,6 @@ div.login_hover p {
 div.login_hover button.enter_btn {
     margin-top: 20px;
     margin-left: 20px;
-    outline: 0;
     border: 0;
 }
 
@@ -402,15 +416,25 @@ div.login_hover a {
     display: inline-block;
     font: inherit;
     font-size: 13px;
+    vertical-align: middle;
     line-height: 24px;
     font-weight: 400;
     color: #323232;
+    background: linear-gradient(to right, #323232, #323232 100%);
+    background-position: 50% 85%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+}
+
+div.login_hover a:hover {
+    background-color: #f8f7f4;
 }
 
 div.login_hover div.help_box {
     display: inline-block;
     width: 130px;
     padding-left: 17px;
+    margin-top: 19px;
     vertical-align: middle;
 }
 
@@ -548,6 +572,11 @@ div.breadcrumb ul {
     line-height: 16px;
     font-weight: 400;
     color: #f7f6f3;
+}
+
+.breadcrumb li:not(:last-child) {
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.5);
 }
 
 .breadcrumb li:first-child::after {
@@ -772,6 +801,7 @@ div.range_controls div.bar::before {
     width: 20px;
     height: 23px;
     background-image: url("../img/filter-button.svg");
+    cursor: pointer;
 }
 
 div.range_controls div.bar::after {
@@ -782,6 +812,7 @@ div.range_controls div.bar::after {
     width: 20px;
     height: 23px;
     background-image: url("../img/filter-button.svg");
+    cursor: pointer;
 }
 
 div.radio_filter_box {
@@ -802,6 +833,7 @@ ul.radio_filter li {
     margin-right: 32px;
     padding-top: 10px;
     padding-left: 15px;
+    vertical-align: middle;
     list-style: none;
     font-size: 16px;
     line-height: 18px;
@@ -842,6 +874,11 @@ input:checked + .label_radio::after {
     border-radius: 50%;
 }
 
+input:disabled + .label_radio::before,
+input:disabled + .label_radio::before {
+    border-color: #b5c4bc;
+}
+
 ul.radio_filter li:first-child {
     margin-left: 35px;
 }
@@ -880,6 +917,7 @@ ul.checkbox_filter li {
     margin-right: 35px;
     padding-top: 10px;
     padding-left: 15px;
+    vertical-align: middle;
     list-style: none;
     font-size: 16px;
     line-height: 18px;
@@ -915,6 +953,13 @@ input:checked + .label_checkbox::after {
     width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-on1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:disabled + .label_checkbox::before,
+input:disabled + .label_checkbox::after {
+    background-image: url("../img/checkbox-off3.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -958,6 +1003,7 @@ section.sale_one {
     background-color: #7b0927;
     background-image: url("../img/Малиновый фон.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
 }
 
@@ -985,6 +1031,7 @@ section.sale_two {
     background-color: #583529;
     background-image: url("../img/Шоколадный фон.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
 }
 
@@ -1016,6 +1063,8 @@ div.catalog_icecream {
 
 div.hits img,
 div.icecream img {
+    width: 267px;
+    height: 267px;
     border-radius: 50%;
 }
 
@@ -1048,6 +1097,7 @@ p.price_icecream span.rub {
     width: 30px;
     height: 33px;
     margin-left: 3px;
+    vertical-align: baseline;
     background-image: url("../img/ruble.svg");
     background-repeat: no-repeat;
 }
@@ -1068,6 +1118,8 @@ div.icecream a {
     line-height: 22px;
     font-weight: 500;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.5);
 }
 
 div.hits a {
@@ -1108,6 +1160,7 @@ div.info_box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     width: 1146px;
     margin-bottom: 40px;
     color: #323232;
@@ -1115,6 +1168,7 @@ div.info_box {
     background-image: url("../img/Вафля фон.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: cover;
     border-radius: 15px;
 }
 
@@ -1198,6 +1252,10 @@ article.blog_box a {
     line-height: 30px;
     font-weight: 700;
     color: #323232;
+    background: linear-gradient(to right, #353535, #353535 100%);
+    background-position: 0 100%;
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
 }
 
 article.blog_box div.link_blog_box {
@@ -1311,6 +1369,7 @@ div.pages_box {
 
 ul.pages li {
     display: inline-block;
+    vertical-align: middle;
     list-style: none;
 }
 
@@ -1519,12 +1578,17 @@ ul.footer_info {
 }
 
 ul.footer_info a {
+    padding-bottom: 2px;
     font: inherit;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
     color: #ffffff;
     cursor: pointer;
+    background: linear-gradient(to right, #9db1a5, #9db1a5 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
 }
 
 ul.footer_info li:first-of-type a {
@@ -1576,8 +1640,13 @@ div.footer_copyright a.html_link {
 }
 
 p a.html_academy_text {
+    padding-bottom: 2px;
     font: inherit;
     color: #fefefe;
+    background: linear-gradient(to right, #9db1a5, #9db1a5 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
 }
 
 p a.html_academy_text:hover,
