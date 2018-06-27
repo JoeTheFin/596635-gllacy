@@ -128,29 +128,33 @@
                    </select>
                 </fieldset>
                 <fieldset>
-                    <legend>Цена: 100 руб. - 500 руб.</legend>
-                    <input type="range" name="price" min="100" max="500" step="80">
+                    <legend class="price_range">Цена: 100 руб. - 500 руб.</legend>
+                    <div class="range_filter_box">
+                        <div class="range_controls">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Жирность:</legend>
                     <div class="radio_filter_box">
                         <ul class="radio_filter">
                             <li class="filter_option">
-                            <label for="zero">
+                                <label for="zero">
                             <input type="radio" class="option_item filter_input_radio" name="fat_option" value="0%" id="zero"><span class="label_radio">0%</span>
                             </label>
                             </li>
                             <li class="filter_option">
-                            <label for="before10">
+                                <label for="before10">
                             <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 10%" id="before10" checked><span class="label_radio">до 10%</span></label>
                             </li>
                             <li class="filter_option">
-                            <label for="before30">
+                                <label for="before30">
                             <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 30%" id="before30">
                             <span class="label_radio">до 30%</span></label>
                             </li>
                             <li class="filter_option">
-                            <label for="more30">
+                                <label for="more30">
                             <input type="radio" class="option_item filter_input_radio" name="fat_option" value="выше 30%" id="more30"><span class="label_radio">выше 30%</span>
                             </label>
                             </li>
@@ -160,33 +164,33 @@
                 <fieldset>
                     <legend>Наполнители:</legend>
                     <div class="checkbox_filter_box">
-                    <ul class="checkbox_filter">
-                        <li class="filter_option">
-                            <label for="chocolate">
+                        <ul class="checkbox_filter">
+                            <li class="filter_option">
+                                <label for="chocolate">
                             <input type="checkbox" class="option_item filter_input_checkbox" name="chocolate" id="chocolate" checked>
                             <span class="label_checkbox">шоколадные</span></label>
-                        </li>
-                        <li class="filter_option">
-                            <label for="sugar-powders">
+                            </li>
+                            <li class="filter_option">
+                                <label for="sugar-powders">
                             <input type="checkbox" class="option_item filter_input_checkbox" name="sugar-powders" id="sugar-powders" checked>
                             <span class="label_checkbox">сахарные присыпки</span></label>
-                        </li>
-                        <li class="filter_option">
-                            <label for="fruits">
+                            </li>
+                            <li class="filter_option">
+                                <label for="fruits">
                             <input type="checkbox" class="option_item filter_input_checkbox" name="fruits" id="fruits">
                             <span class="label_checkbox">фрукты</span></label>
-                        </li>
-                        <li class="filter_option">
-                            <label for="syrups">
+                            </li>
+                            <li class="filter_option">
+                                <label for="syrups">
                             <input type="checkbox" class="option_item filter_input_checkbox" name="syrups" id="syrups">
                             <span class="label_checkbox">сиропы</span></label>
-                        </li>
-                        <li class="filter_option">
-                            <label for="jams">
+                            </li>
+                            <li class="filter_option">
+                                <label for="jams">
                             <input type="checkbox" class="option_item filter_input_checkbox" name="jams" id="jams">
                             <span class="label_checkbox">джемы</span></label>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
                     </div>
                 </fieldset>
                 <button class="filter_btn">Применить</button>
