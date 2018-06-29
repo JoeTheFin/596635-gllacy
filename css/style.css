@@ -694,9 +694,9 @@ section.slider li.slide {
     margin-bottom: 40px;
 }
 
-input[name="toggle"]:first-child:checked ~ .background #slide1,
-input[name="toggle"]:nth-child(2):checked ~ .background #slide2,
-input[name="toggle"]:nth-child(3):checked ~ .background #slide3 {
+input[name="toggle"]:first-child:checked ~ .background .slider_1,
+input[name="toggle"]:nth-child(2):checked ~ .background .slider_2,
+input[name="toggle"]:nth-child(3):checked ~ .background .slider_3 {
     display: block;
 }
 
