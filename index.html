@@ -6,7 +6,16 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style_min.css" type="text/css" rel="stylesheet">
+    <script>
+        document.createElement('header');
+        document.createElement('section');
+        document.createElement('main');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('nav');
+        document.createElement('footer');
+    </script> <!-- хак для IE11 !-->
 </head>
 
 <body>
@@ -19,7 +28,7 @@
 
         <header class="main_header">
             <a class="main_header_logo">
-            <img src="img/Logo.png" width="154px" height="64px" alt="Логотип Глэйси">
+            <img src="img/Logo.png" width="154" height="64" alt="Логотип Глэйси">
         </a>
             <nav class="main_navigation">
                 <ul class="site_navigation">
@@ -111,12 +120,12 @@
             <div class="sale_box">
                 <section class="sale sale_one">
                     <h2>Малинка даром!</h2>
-                    <p>При покупке 2 кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
+                    <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                     <a class="btn" href="catalog.html">Хочу варенье!</a>
                 </section>
                 <section class="sale sale_two">
                     <h2>Шоколадки даром!</h2>
-                    <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br> вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                    <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                     <a class="btn" href="catalog.html">Хочу шоколадки!</a>
                 </section>
             </div>
@@ -124,7 +133,7 @@
             <div class="hits">
                 <div class="price_list">
                     <article class="product hit_one">
-                        <img src="img/1.jpg" width="267px" height="267px" alt="Апельсиновое мороженое"></img>
+                        <img src="img/1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
                         <p class="price_hit">310<span class="rub"></span><span>/кг</span></p>
                         <a>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</a>
                         <div class="product_hover">
@@ -132,7 +141,7 @@
                         </div>
                     </article>
                     <article class="product hit_two">
-                        <img src="img/2.jpg" width="267px" height="267px" alt="Кофейное мороженое"></img>
+                        <img src="img/2.jpg" width="267" height="267" alt="Кофейное мороженое">
                         <p class="price_hit">380<span class="rub"></span><span>/кг</span></p>
                         <a>Сливочно-кофейное с кусочками<br> шоколада</a>
                         <div class="product_hover">
@@ -140,16 +149,16 @@
                         </div>
                     </article>
                     <article class="product hit_three">
-                        <img src="img/3.jpg" width="267px" height="267px" alt="Клубничное мороженое"></img>
-                        <p class="price_hit">310<span class="rub"></span><span>/кг</span></p>
+                        <img src="img/3.jpg" width="267" height="267" alt="Клубничное мороженое">
+                        <p class="price_hit">355<span class="rub"></span><span>/кг</span></p>
                         <a>Сливочно-клубничное с<br> присыпкой из белого шоколада</a>
                         <div class="product_hover">
                             <button class="btn hover_icecream">Быстрый просмотр</button>
                         </div>
                     </article>
                     <article class="product hit_four">
-                        <img src="img/4.jpg" width="267px" height="267px" alt="Крем-брюле"></img>
-                        <p class="price_hit">310<span class="rub"></span><span>/кг</span></p>
+                        <img src="img/4.jpg" width="267" height="267" alt="Крем-брюле">
+                        <p class="price_hit">415<span class="rub"></span><span>/кг</span></p>
                         <a>Сливочное крем-брюле с<br> карамельной подливкой</a>
                         <div class="product_hover">
                             <button class="btn hover_icecream">Быстрый просмотр</button>
@@ -160,12 +169,12 @@
 
             <div class="info_box">
                 <h3>Магазин Глэйси &mdash; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
-                <p class="paragraph_1">Все наше мороженое изготавливается на собственном<br> производстве, с использованием современного оборудования<br> и проверенных временем технологий.
+                <p class="paragraph_1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
                 </p>
-                <p class="paragraph_2">Закупка ингредиентов производится только у проверенных<br> фермерских хозяйств и компаний, с которыми нас связывает<br> долговременное сотрудничество.
+                <p class="paragraph_2">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                 </p>
-                <p class="paragraph_3">Для приготовления мороженого используются настоящие<br> сливки и молоко высочайшего качества. Все дополнительные<br> ингредиенты и добавки произведены из натурального,<br> экологически чистого сырья.</p>
-                <p class="paragraph_4">Доставка нашего мороженого до заказчиков осуществляется<br> в специальном термопаке, который не дает мороженому<br> растаять в пути и позволяет сохранить превосходный вкус.</p>
+                <p class="paragraph_3">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                <p class="paragraph_4">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </div>
 
             <div class="news_box">
@@ -187,6 +196,7 @@
 
             <div class="map_box">
                 <h3 class="visually_hidden">Как до нас добраться</h3>
+                <img src="img/map.png" width=1200 height=430>
                 <iframe src="https://yandex.ru/map-widget/v1/-/CBuevMtdpD" height="430"></iframe>
                 <section class="contacts">
                     <p>Адрес главного офиса<br> и офлайн-магазина:<br>
@@ -244,7 +254,7 @@
 
     </div>
 
-<script src="js/script.js">
+<script src="js/script_min.js">
 </script>
 
 </body>
