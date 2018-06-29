@@ -1075,10 +1075,24 @@ div.sale_box {
 }
 
 section.sale_one {
+    display: flex;
+    flex-direction: column;
     width: 560px;
     min-height: 230px;
     background-color: #7b0927;
     background-image: url("../img/Малиновый фон.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+section.sale_two {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    min-height: 230px;
+    background-color: #583529;
+    background-image: url("../img/Шоколадный фон.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
@@ -1104,26 +1118,17 @@ section.sale_two p {
     color: #ffffff;
 }
 
-section.sale_two {
-    width: 560px;
-    min-height: 230px;
-    background-color: #583529;
-    background-image: url("../img/Шоколадный фон.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 15px;
-}
-
-.sale .btn {
+section.sale a {
+    margin-top: 28px;
     margin-left: 375px;
-    margin-top: 27px;
-    margin-bottom: 20px;
+    margin-right: 21px;
+    margin-bottom: 15px;
 }
 
-.sale_two .btn {
-    padding-top: 11px;
-    width: 147px;
+section.sale_two a {
+    margin-top: 26px;
     margin-left: 350px;
+    margin-right: 19px;
 }
 
 article.product {
@@ -1341,6 +1346,7 @@ article.blog_box {
     background-color: #ffffff;
     background-image: url("../img/Клубничный фон.png");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
 }
 
