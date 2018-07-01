@@ -25,7 +25,7 @@ img {
     height: auto;
 }
 
-.header, .main, .footer {
+.main_header, .main, .main_footer {
     width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
@@ -46,10 +46,13 @@ a {
     margin: -1px;
 }
 
-input[type="text"],
-input[type="password"],
-textarea,
-input[type="email"] {
+ul.user_navigation input[type="text"],
+ul.user_navigation input[type="password"],
+ul.user_navigation input[type="email"],
+div.send_box input[type="email"],
+.modal input[type="text"],
+.modal input[type="email"],
+.modal textarea {
     font: inherit;
     font-size: 16px;
     line-height: 24px;
@@ -63,18 +66,38 @@ input[type="email"] {
             box-sizing: border-box;
 }
 
-input[type="text"]:hover,
-input[type="password"]:hover,
-textarea:hover,
-input[type="email"] {
+ul.user_navigation input[type="text"]:hover,
+ul.user_navigation input[type="password"]:hover,
+ul.user_navigation input[type="email"]:hover,
+div.send_box input[type="email"]:hover,
+.modal input[type="text"]:hover,
+.modal input[type="email"]:hover,
+.modal textarea:hover{
     border: 2px solid #c7c6c5;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-input[type="email"] {
+div.send_box input[type="email"]:hover,
+.modal input[type="text"]:hover,
+.modal input[type="email"]:hover,
+.modal textarea:hover {
+    padding: 9px 12px;
+}
+
+ul.user_navigation input[type="text"]:focus,
+ul.user_navigation input[type="password"]:focus,
+ul.user_navigation input[type="email"]:focus,
+div.send_box input[type="email"]:focus,
+.modal input[type="text"]:focus,
+.modal input[type="email"]:focus,
+.modal textarea:focus {
     border: 2px solid #8fbdec;
+}
+
+div.send_box input[type="email"]:focus,
+.modal input[type="text"]:focus,
+.modal input[type="email"]:focus,
+.modal textarea:focus {
+    padding: 9px 12px;
 }
 
 h2 {
@@ -522,7 +545,7 @@ div.basket_hover {
             box-shadow: 0px 15px 25px 1px #58685f;
 }
 
-table tr:last-child {
+.table_basket tr:last-child {
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
@@ -540,30 +563,32 @@ button.btn_basket:active {
     outline: none;
 }
 
-table {
+.table_basket {
     width: 510px;
     height: 150px;
     margin: 15px;
 }
 
-td {
+.table_basket td {
     vertical-align: baseline;
 }
 
-table span.grey_color {
+.table_basket span.grey_color {
     color: #9f9f9f;
 }
 
-tr img {
+.line_1 img,
+.line_2 img{
     vertical-align: middle;
     border-radius: 50%;
 }
 
-tr td:nth-child(3) {
+.line_1 td:nth-child(3),
+.line_2 td:nth-child(3) {
     width: 210px;
 }
 
-table td.all_send {
+.table_basket td.all_send {
     width: 100%;
     padding-top: 10px;
     vertical-align: middle;
@@ -571,7 +596,7 @@ table td.all_send {
     border-top: 1px solid #cacac7;
 }
 
-td button {
+.table_basket button {
     width: 15px;
     height: 15px;
     margin: 0;
@@ -958,8 +983,8 @@ ul.radio_filter li {
     font-weight: 500;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.filters input[type="radio"],
+.filters input[type="checkbox"] {
     display: none;
 }
 
