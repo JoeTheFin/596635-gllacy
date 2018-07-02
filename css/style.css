@@ -1413,7 +1413,7 @@ div.news_box {
 
 .blog_box {
     width: 560px;
-    height: 220px;
+    min-height: 220px;
     color: #323232;
     background-color: #ffffff;
     background-image: url("../img/klubnika.png");
@@ -1448,20 +1448,22 @@ div.news_box {
 .blog_box div.link_blog_box {
     width: 300px;
     margin-top: -18px;
+    margin-bottom: 15px;
     padding-left: 19px;
 }
 
 div.send_box {
     width: 560px;
-    height: 220px;
+    min-height: 220px;
     background-image: url("../img/bg-post.svg");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
 }
 
 div.content_send {
     width: 548px;
-    height: 208px;
+    min-height: 208px;
     margin-left: 6px;
     margin-top: -9px;
     background-color: #f8f7f4;
@@ -1480,9 +1482,7 @@ div.send_box p {
 
 div.content_send input {
     width: 368px;
-    margin-left: 20px;
-    margin-top: 19px;
-    margin-right: 7px;
+    margin: 19px 7px 10px 20px;
     padding: 10px 13px;
     border-radius: 5px;
     -webkit-box-sizing: border-box;
@@ -1522,7 +1522,7 @@ div.map_box iframe {
     top: 62px;
     right: 0px;
     width: 303px;
-    height: 306px;
+    min-height: 306px;
     color: #323232;
     background-color: #fefefe;
     border-radius: 15px;
@@ -1583,10 +1583,12 @@ div.map_box iframe {
 }
 
 div.pages_box {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    margin-left: 940px;
+    margin-top: -8px;
     margin-right: 22px;
-    padding-bottom: 16px;
+    padding-bottom: 17px;
     cursor: default;
 }
 
@@ -1604,15 +1606,15 @@ ul.pages {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: auto;
 }
 
 ul.pages li {
     list-style: none;
-    padding-top: 9px;
 }
 
 ul.pages a.page_one {
-    margin: 0;
+    margin-right: 1px;
     padding: 3px 9px;
     font-size: 16px;
     line-height: 18px;
@@ -1624,7 +1626,9 @@ ul.pages a.page_one {
 }
 
 ul.pages a {
+    position: relative;
     padding: 3px 9px;
+    margin-right: 2px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
@@ -1632,11 +1636,11 @@ ul.pages a {
     border-radius: 50%;
 }
 
-ul.pages li::before {
+ul.pages li:first-child a::before {
     content: "";
     position: absolute;
-    top: 13px;
-    right: 160px;
+    top: 8px;
+    right: 43px;
     width: 8px;
     height: 12px;
     background-image: url("../img/icon-right-small.svg");
@@ -1647,11 +1651,11 @@ ul.pages li::before {
             transform: rotate(180deg);
 }
 
-ul.pages li::after {
+ul.pages li:last-child a::after {
     content: "";
     position: absolute;
-    top: 13px;
-    right: -22px;
+    top: 8px;
+    left: 43px;
     width: 8px;
     height: 12px;
     background-image: url("../img/icon-right-small-wh.svg");
