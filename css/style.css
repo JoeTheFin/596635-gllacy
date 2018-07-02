@@ -865,7 +865,7 @@ div.price_range_box {
 }
 
 div.price_range_box input {
-    width: 60px;
+    width: 58px;
     background-color: inherit;
     border: none;
     color: #ffffff;
@@ -1109,12 +1109,12 @@ div.filters .filter_btn {
     min-width: 143px;
     height: 36px;
     margin-top: 27px;
-    padding: 8px 10px;
+    padding: 7px 12px;
     color: #ffffff;
     background-color: #aabcb2;
     outline: none;
     border: 2px solid #ffffff;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 div.filters .filter_btn:hover {
@@ -1124,7 +1124,6 @@ div.filters .filter_btn:hover {
 }
 
 div.filters .filter_btn:active {
-    padding: 9px 27px;
     color: #353535;
     background-color: #eaeaea;
     -webkit-box-shadow: inset 0px 2px 2px 0px #6a6b6a;
