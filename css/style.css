@@ -74,12 +74,6 @@ div.send_box input[type="email"]:hover,
 .modal input[type="email"]:hover,
 .modal textarea:hover{
     border: 2px solid #c7c6c5;
-}
-
-div.send_box input[type="email"]:hover,
-.modal input[type="text"]:hover,
-.modal input[type="email"]:hover,
-.modal textarea:hover {
     padding: 9px 12px;
 }
 
@@ -91,12 +85,6 @@ div.send_box input[type="email"]:focus,
 .modal input[type="email"]:focus,
 .modal textarea:focus {
     border: 2px solid #8fbdec;
-}
-
-div.send_box input[type="email"]:focus,
-.modal input[type="text"]:focus,
-.modal input[type="email"]:focus,
-.modal textarea:focus {
     padding: 9px 12px;
 }
 
@@ -1320,7 +1308,7 @@ div.product_hover {
     display: none;
     top: -10px;
     left: -13px;
-    z-index: 0;
+    z-index: 1;
     width: 293px;
     height: 405px;
     background-color: rgba(255,255,255,0.2);
@@ -1495,8 +1483,7 @@ div.content_send input {
     margin-left: 20px;
     margin-top: 19px;
     margin-right: 7px;
-    padding: 10px;
-    padding-left: 14px;
+    padding: 10px 13px;
     border-radius: 5px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
