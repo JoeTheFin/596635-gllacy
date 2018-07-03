@@ -26,6 +26,7 @@ img {
 }
 
 .main_header, .main, .main_footer {
+    display: block;
     width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
@@ -291,7 +292,8 @@ li.main_list:hover {
 
 li.main_list a:active {
     background-color: #f6b5a5;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 li.mail_list:active {
@@ -837,7 +839,7 @@ form.filter select:hover {
     color: #323232;
     background-image: url("../img/icon-down-dir.svg");
     background-repeat: no-repeat;
-    background-position: 90% 50%;
+    background-position: 93% 50%;
 }
 
 div.range_filter_box {
@@ -918,8 +920,12 @@ div.bar .min::before {
 }
 
 div.bar .min:hover {
+    -webkit-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out;
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 div.bar .max {
@@ -942,8 +948,12 @@ div.range .max::before {
 }
 
 div.range .max:hover {
+    -webkit-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out;
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 div.radio_filter_box {
@@ -961,9 +971,8 @@ ul.checkbox_filter {
 
 ul.radio_filter li {
     display: inline-block;
-    margin-right: 30px;
-    padding-top: 10px;
-    padding-left: 15px;
+    margin-right: 27px;
+    padding-top: 12px;
     vertical-align: middle;
     list-style: none;
     font-size: 16px;
@@ -971,9 +980,18 @@ ul.radio_filter li {
     font-weight: 500;
 }
 
+ul.radio_filter li:first-child {
+    margin-left: 30px;
+}
+
 .filters input[type="radio"],
 .filters input[type="checkbox"] {
-    display: none;
+    opacity: 0;
+}
+
+.filters input[type="radio"]:focus,
+.filters input[type="checkbox"]:focus {
+    outline: 2px solid #5e6d65;
 }
 
 ul.radio_filter label,
@@ -982,10 +1000,10 @@ ul.checkbox_filter label {
     cursor: pointer;
 }
 
-label .label_radio::before {
+.radio_label::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -4px;
     left: -33px;
     width: 16px;
     height: 16px;
@@ -993,10 +1011,10 @@ label .label_radio::before {
     border-radius: 50%;
 }
 
-input:checked + .label_radio::after {
+.filters input[type="radio"]:checked + .radio_label::after {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: -26px;
     width: 4px;
     height: 4px;
@@ -1005,13 +1023,9 @@ input:checked + .label_radio::after {
     border-radius: 50%;
 }
 
-input:disabled + .label_radio::before,
-input:disabled + .label_radio::before {
+input:disabled + .radio_label::before,
+input:disabled + .radio_label::before {
     border-color: #b5c4bc;
-}
-
-ul.radio_filter li:first-child {
-    margin-left: 34px;
 }
 
 ul.radio_filter li:hover,
@@ -1019,25 +1033,13 @@ ul.checkbox_filter li:hover {
     color: #323232;
 }
 
-li:hover .label_radio::after,
-li:hover .label_radio::before {
+li:hover .radio_label::after,
+li:hover .radio_label::before {
     border-color: #ffffff;
 }
 
-li:hover .label_radio::after {
+li:hover .radio_label::after {
     background-color: #ffffff; 
-}
- 
-li:hover .label_checkbox::before {
-    background-image: url("../img/checkbox-off.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-li:hover input:checked + .label_checkbox::after {
-    background-image: url("../img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 legend.legend4 {
@@ -1055,7 +1057,7 @@ div.checkbox_filter_box {
 
 ul.checkbox_filter li {
     display: inline-block;
-    margin-right: 34px;
+    margin-right: 16px;
     padding-top: 10px;
     padding-left: 15px;
     vertical-align: middle;
@@ -1065,20 +1067,20 @@ ul.checkbox_filter li {
     font-weight: 500;
 }
 
+ul.checkbox_filter li:first-child {
+    margin-left: 13px;
+}
+
 ul.radio_filter li:last-child,
 ul.checkbox_filter li:last-child {
     margin-right: 18px;
 }
 
-ul.checkbox_filter li:first-child {
-    margin-left: 31px;
-}
-
-label .label_checkbox::before {
+.checkbox_label::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -37px;
+    top: -1px;
+    left: -35px;
     width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-off1.svg");
@@ -1086,11 +1088,11 @@ label .label_checkbox::before {
     background-position: center;
 }
 
-input:checked + .label_checkbox::after {
+.filters input[type="checkbox"]:checked + .checkbox_label::after {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -35px;
+    top: -1px;
+    left: -33px;
     width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-on1.svg");
@@ -1098,8 +1100,20 @@ input:checked + .label_checkbox::after {
     background-position: center;
 }
 
-input:disabled + .label_checkbox::before,
-input:disabled + .label_checkbox::after {
+li:hover .checkbox_label::before {
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li:hover input[type="checkbox"]:checked ~ .checkbox_label::after {
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:disabled + .checkbox_label::before,
+input:disabled + .checkbox_label::after {
     background-image: url("../img/checkbox-off3.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -1144,8 +1158,13 @@ div.sale_box {
 }
 
 .sale_one {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 560px;
     min-height: 230px;
     background-color: #7b0927;
@@ -1156,8 +1175,13 @@ div.sale_box {
 }
 
 .sale_two {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 560px;
     min-height: 230px;
     background-color: #583529;
@@ -1462,6 +1486,7 @@ div.send_box {
 
 div.content_send {
     width: 548px;
+    height: calc(100% - 15px);
     min-height: 208px;
     margin-left: 6px;
     margin-top: -9px;
@@ -1574,7 +1599,7 @@ div.map_box iframe {
     font-weight: 400;
 }
 
-.contacts a {
+.contacts .btn_feedback {
     margin-top: 9px;
     margin-left: 25px;
     margin-bottom: 29px;
@@ -1582,12 +1607,16 @@ div.map_box iframe {
 }
 
 div.pages_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: relative;
-    margin-top: -8px;
-    margin-right: 22px;
-    padding-bottom: 17px;
+    margin-top: -7px;
+    margin-right: -5px;
+    padding-bottom: 16px;
     cursor: default;
 }
 
@@ -1635,31 +1664,40 @@ ul.pages a {
     border-radius: 50%;
 }
 
-ul.pages li:first-child a::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    right: 43px;
+ul.pages a:focus {
+    outline: 1px solid #5e6d65;
+}
+
+ul.pages a.page_arrow {
+    display: block;
     width: 8px;
     height: 12px;
+    left: -9px;
     background-image: url("../img/icon-right-small.svg");
     background-repeat: no-repeat;
     background-position: center;
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
-ul.pages li:last-child a::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 43px;
+ ul.pages a.page_arrow_last {
+    display: block;
     width: 8px;
     height: 12px;
+    right: -7px;
     background-image: url("../img/icon-right-small-wh.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+}
+
+ul.pages a.page_arrow_last:hover,
+ul.pages a.page_arrow:hover {
+    background-color: inherit;
 }
 
 ul.pages a:hover {

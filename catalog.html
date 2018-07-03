@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style_min.css" type="text/css" rel="stylesheet">
     <script>
         document.createElement('header');
         document.createElement('section');
@@ -15,7 +15,9 @@
         document.createElement('aside');
         document.createElement('nav');
         document.createElement('footer');
-    </script> <!-- хак для IE11 !-->
+
+    </script>
+    <!-- хак для IE11 !-->
 </head>
 
 <body class="catalog_html">
@@ -28,12 +30,12 @@
             <ul class="site_navigation">
                 <li class="site_catalog"><a class="catalog_here" href="catalog.html">Каталог</a>
                     <ul class="main_menu">
-                            <li class="main_list"><a class="main_new" href="#">Новинки</a></li>
-                            <li class="main_list main_here"><a href="catalog.html">Сливочное</a></li>
-                            <li class="main_list"><a href="#">Щербеты</a></li>
-                            <li class="main_list"><a href="#">Фруктовый лед</a></li>
-                            <li class="main_list"><a href="#">Мелорин</a></li>
-                        </ul>
+                        <li class="main_list"><a class="main_new" href="#">Новинки</a></li>
+                        <li class="main_list main_here"><a href="catalog.html">Сливочное</a></li>
+                        <li class="main_list"><a href="#">Щербеты</a></li>
+                        <li class="main_list"><a href="#">Фруктовый лед</a></li>
+                        <li class="main_list"><a href="#">Мелорин</a></li>
+                    </ul>
                 </li>
                 <li><a class="menu_link" href=#>Доставка и оплата</a></li>
                 <li><a class="menu_link" href=#>О Компании</a></li>
@@ -156,22 +158,24 @@
                     <div class="radio_filter_box">
                         <ul class="radio_filter">
                             <li class="filter_option">
-                                <label class="radio_label" for="zero" tabindex="0">
-                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="0%" id="zero"><span class="label_radio">0%</span>
-                            </label>
+                                <input type="radio" class="option_item filter_input_radio" name="fat_option" value="0%" id="zero">
+                                <label class="radio_label" for="zero">0%
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="before10" tabindex="0">
-                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 10%" id="before10" checked><span class="label_radio">до 10%</span></label>
+                                <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 10%" id="after10" checked>
+                                <label class="radio_label" for="after10">до 10%
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="before30" tabindex="0">
-                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 30%" id="before30"><span class="label_radio">до 30%</span></label>
+                                <input type="radio" class="option_item filter_input_radio" name="fat_option" value="до 30%" id="after30">
+                                <label class="radio_label" for="after30">до 30%
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="more30" tabindex="0">
-                            <input type="radio" class="option_item filter_input_radio" name="fat_option" value="выше 30%" id="more30"><span class="label_radio">выше 30%</span>
-                            </label>
+                                <input type="radio" class="option_item filter_input_radio" name="fat_option" value="выше 30%" id="before30">
+                                <label class="radio_label" for="before30">выше 30%
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -181,29 +185,29 @@
                     <div class="checkbox_filter_box">
                         <ul class="checkbox_filter">
                             <li class="filter_option">
-                                <label for="chocolate" tabindex="0">
-                            <input type="checkbox" class="option_item filter_input_checkbox" name="chocolate" id="chocolate" checked>
-                            <span class="label_checkbox">шоколадные</span></label>
+                                <input type="checkbox" class="option_item filter_input_checkbox" name="chocolate" id="chocolate" checked>
+                                <label class="checkbox_label" for="chocolate" tabindex="0">шоколадные
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="sugar-powders" tabindex="0">
-                            <input type="checkbox" class="option_item filter_input_checkbox" name="sugar-powders" id="sugar-powders" checked>
-                            <span class="label_checkbox">сахарные присыпки</span></label>
+                                <input type="checkbox" class="option_item filter_input_checkbox" name="sugar-powders" id="sugar-powders" checked>
+                                <label class="checkbox_label" for="sugar-powders" tabindex="0">сахарные присыпки
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="fruits" tabindex="0">
-                            <input type="checkbox" class="option_item filter_input_checkbox" name="fruits" id="fruits">
-                            <span class="label_checkbox">фрукты</span></label>
+                                <input type="checkbox" class="option_item filter_input_checkbox" name="fruits" id="fruits">
+                                <label class="checkbox_label" for="fruits" tabindex="0">фрукты
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="syrups" tabindex="0">
-                            <input type="checkbox" class="option_item filter_input_checkbox" name="syrups" id="syrups">
-                            <span class="label_checkbox">сиропы</span></label>
+                                <input type="checkbox" class="option_item filter_input_checkbox" name="syrups" id="syrups">
+                                <label class="checkbox_label" for="syrups" tabindex="0">сиропы
+                                </label>
                             </li>
                             <li class="filter_option">
-                                <label for="jams" tabindex="0">
-                            <input type="checkbox" class="option_item filter_input_checkbox" name="jams" id="jams">
-                            <span class="label_checkbox">джемы</span></label>
+                                <input type="checkbox" class="option_item filter_input_checkbox" name="jams" id="jams">
+                                <label class="checkbox_label" for="jams" tabindex="0">джемы
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -316,6 +320,9 @@
         <div class="pages_box">
             <ul class="pages">
                 <li>
+                    <a class="page page_arrow" href="#"></a>
+                </li>
+                <li>
                     <a class="page page_one">1</a>
                 </li>
                 <li>
@@ -329,6 +336,9 @@
                 </li>
                 <li>
                     <a class="page" href="#">5</a>
+                </li>
+                <li>
+                    <a class="page page_arrow_last" href="#"></a>
                 </li>
             </ul>
         </div>
