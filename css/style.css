@@ -1132,7 +1132,8 @@ div.filters .filter_btn {
     border-radius: 15px;
 }
 
-div.filters .filter_btn:hover {
+div.filters .filter_btn:hover,
+div.filters .filter_btn:focus {
     color: #353535;
     background-color: #ffffff;
     border: 2px solid #ffffff;
@@ -1532,7 +1533,7 @@ div.map_box img {
 div.map_box iframe {
     position: absolute;
     left: 100%;
-    width: 99vw;
+    width: 98.5vw;
     min-width: 1200px;
     margin-left: -50%;
     border: none;
