@@ -835,7 +835,8 @@ form.filter select {
     border-radius: 20px;
 }
 
-form.filter select:hover {
+form.filter select:hover,
+form.filter select:focus {
     color: #323232;
     background-image: url("../img/icon-down-dir.svg");
     background-repeat: no-repeat;
@@ -868,7 +869,7 @@ div.price_range_box {
 
 div.price_range_box input {
     width: 58px;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     color: #ffffff;
     font-size: 14px;
@@ -989,9 +990,9 @@ ul.radio_filter li:first-child {
     opacity: 0;
 }
 
-.filters input[type="radio"]:focus,
-.filters input[type="checkbox"]:focus {
-    outline: 2px solid #5e6d65;
+.filters input[type="radio"]:focus + label,
+.filters input[type="checkbox"]:focus + label{
+    outline: 2px solid gray;
 }
 
 ul.radio_filter label,
@@ -1211,16 +1212,16 @@ div.sale_box {
     color: #ffffff;
 }
 
-.sale a {
+.sale a { 
     margin-top: 28px;
-    margin-left: 375px;
+    margin-left: 373px;
     margin-right: 21px;
     margin-bottom: 15px;
 }
 
 .sale_two a {
     margin-top: 26px;
-    margin-left: 350px;
+    margin-left: 348px;
     margin-right: 19px;
 }
 
@@ -1454,7 +1455,6 @@ div.news_box {
 }
 
 .blog_box a {
-    font: inherit;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
