@@ -1531,11 +1531,11 @@ div.map_box img {
 }
 
 div.map_box iframe {
-    position: absolute;
-    left: 100%;
-    width: 98.5vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
     min-width: 1200px;
-    margin-left: -50%;
     border: none;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -1635,7 +1635,6 @@ ul.pages {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: auto;
 }
 
 ul.pages li {
