@@ -1335,7 +1335,8 @@ div.product_hover {
     left: -13px;
     z-index: 1;
     width: 293px;
-    height: 405px;
+    height: 100%;
+    padding-bottom: 65px;
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
     -webkit-box-shadow: 0px 15px 35px 1px #58685f;
@@ -1343,9 +1344,11 @@ div.product_hover {
 }
 
 button.hover_icecream {
+    position: absolute;
+    left: calc(50% - 100px);
+    bottom: 20px;
     border: none;
-    margin-top: 340px;
-    margin-left: 46px;
+    border-radius: 20px;
 }
 
 div.info_box {
