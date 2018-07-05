@@ -1539,10 +1539,9 @@ div.map_box iframe {
     right: 50%;
     width: 100vw;
     min-width: 1200px;
+    margin-left: -50vw;
+    margin-right: -50vw;
     border: none;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
 }
 
 .contacts {
